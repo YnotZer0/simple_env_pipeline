@@ -19,6 +19,10 @@ app.get("/getenv", function (request, response) {
     response.json(data);
 });
 
+
+console.log("port="+port);
+console.log("environment="+process.env.ENVIRONMENT);
+
 app.listen(port, function () {
   console.log("To view your app, open this link in your browser: http://localhost:" + port);
 });
