@@ -1,6 +1,7 @@
 var express = require("express");
 var app = express();
 var port = process.env.PORT || 4000;
+var env = process.env.ENVIRONMENT;
 
 // CORS support
 var allowCrossDomain = function (req, res, next) {
@@ -13,15 +14,19 @@ var allowCrossDomain = function (req, res, next) {
 
 app.use(allowCrossDomain);
 
+app.get("/", function (request, response) {
+    data = { "welcome": "to the test app" };
+    response.json(data);
+});
 
 app.get("/getenv", function (request, response) {
-    data = { "environment": process.env.ENVIRONMENT };
+    data = { "environment": env };
     response.json(data);
 });
 
 
 console.log("port="+port);
-console.log("environment="+process.env.ENVIRONMENT);
+console.log("environment="+env);
 
 app.listen(port, function () {
   console.log("To view your app, open this link in your browser: http://localhost:" + port);
