@@ -1,10 +1,9 @@
 applications:
--buildpack: sdk-for-nodejs
-host: envtesterapp
-name: envtesterapp
-instances: 1
-memory: 128M
-disk_quota: 1024M
-timeout: 180
-
+- path: .
+  memory: 64M
+  instances: 1
+  domain: eu-gb.mybluemix.net
+  name: envtesterapp
+  host: envtesterapp
+  disk_quota: 1024M
 
