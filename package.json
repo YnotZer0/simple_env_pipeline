@@ -1,7 +1,7 @@
 {
-  "name": "env tester app",
+  "name": "envtesterapp",
   "main": "server.js",
-  "description": "tester nodeJS api for ENV values from CI/CD pipeline rather than .env file",
+  "description": "tester nodeJS api for ENV values from CI_CD pipeline rather than env file",
   "version": "0.0.1",
   "private": false,
   "engines": {

@@ -1,0 +1,10 @@
+applications:
+-buildpack: sdk-for-nodejs
+host: envtesterapp
+name: envtesterapp
+instances: 1
+memory: 128M
+disk_quota: 1024M
+timeout: 180
+
+
