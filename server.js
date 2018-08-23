@@ -1,7 +1,11 @@
+//load environment variables from the .env file that was created during the pipeline build
+require('dotenv').config('.env');
+//console.log(process.env);
 var express = require("express");
 var app = express();
+
 var port = process.env.PORT || 4000;
-var env = process.env.ENVIRONMENT;
+var env = process.env.ENVIRONMENT || undefined;
 
 // CORS support
 var allowCrossDomain = function (req, res, next) {
