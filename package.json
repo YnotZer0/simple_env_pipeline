@@ -1,0 +1,19 @@
+{
+  "name": "env tester app",
+  "main": "server.js",
+  "description": "tester nodeJS api for ENV values from CI/CD pipeline rather than .env file",
+  "version": "0.0.1",
+  "private": false,
+  "engines": {
+    "node": "6.*",
+    "npm": "5.*"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "author": "IBM",
+  "license": "Apache-2.0"
+}
